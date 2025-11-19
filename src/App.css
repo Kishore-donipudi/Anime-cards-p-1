@@ -1,0 +1,207 @@
+/* General Body Styles */
+body{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+} 
+.home{
+  background-color: #121212;  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px 5px 5px 5px;
+}
+
+
+/* Navbar Styles */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #231c2e;
+  padding: 10px 20px;
+}
+.navbar h1{
+  font-size: 20px;
+    margin:5px 0;
+  padding:5px 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+
+
+}
+.navbar h1:hover{
+  color: white;
+  padding:5px 10px;
+
+}
+.navbar{
+  color: rgb(55, 169, 211);
+
+}
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li{
+  margin: 0 10px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+.navbar li a{
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+}
+.navbar li a:hover{
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: hwb(180 0% 25%);}
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.search-input {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 250px;
+    margin-right: 10px;
+}
+.search-input:focus {
+    outline: none;
+    border-color: #8a5cda;
+    box-shadow: 0 0 5px rgba(138, 92, 218, 0.5);
+}
+.search-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.search-button:hover {
+    background-color: cyan;
+}
+
+/* Grid Layout for Anime Cards */
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 25px;
+}
+
+/* New Card Design */.card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(138, 92, 218, 0.4);
+}
+.card img{
+    width: 100%;
+    height: auto;
+}
+.anime-img{
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+.anime-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gradient overlay for better text readability */
+.anime-img::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, #1e1e1e, transparent);
+}
+
+.anime-actions{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+}
+.anime-actions button{
+    background-color: #8a5cda;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.anime-actions button:hover{
+    background-color: #7b4fbf;
+}
+.anime-actions .fav-btn {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.anime-actions .fav-btn:hover {
+    background-color: #8a5cda;
+    transform: scale(1.1);
+}
+
+.anime-actions .fav-btn.favorited {
+    background-color: #e53e3e; /* Red color for favorited */
+}
+
+.anime-actions .fav-btn.favorited:hover {
+    background-color: #c53030; /* A darker red on hover */
+}
+
+.anime-info {
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1; /* Ensures footer content stays at the bottom */
+}
+
+.anime-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.4rem;
+}
+
+.anime-info p {
+    margin: 4px 0;
+    color: #b0b0b0;
+    font-size: 0.95rem;
+}
